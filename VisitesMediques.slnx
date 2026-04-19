@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="VisitesMediques.Application/VisitesMediques.Application.csproj" />
+  <Project Path="VisitesMediques.Domain/VisitesMediques.Domain.csproj" />
+  <Project Path="VisitesMediques.Infrastructure.MongoDB/VisitesMediques.Infrastructure.MongoDB.csproj" />
+  <Project Path="VisitesMediques.Infrastructure.MySQL/VisitesMediques.Infrastructure.MySQL.csproj" />
+  <Project Path="VisitesMediques.Infrastructure.SQLServer/VisitesMediques.Infrastructure.SQLServer.csproj" />
+  <Project Path="VisitesMediques.WebUI/VisitesMediques.WebUI.csproj" />
+</Solution>

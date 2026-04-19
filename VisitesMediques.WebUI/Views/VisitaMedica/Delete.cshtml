@@ -1,0 +1,32 @@
+@model VisitesMediques.Domain.Entities.VisitaMedica
+
+@{
+    ViewData["Title"] = "Eliminar Visita";
+}
+
+<h1 class="text-danger">Eliminar Visita Médica</h1>
+
+<h3>¿Estás seguro de que deseas eliminar este registro? Esta acción no se puede deshacer.</h3>
+<hr />
+<div>
+    <dl class="row mt-4">
+        <dt class="col-sm-3">Paciente:</dt>
+        <dd class="col-sm-9">@Model.NomPacient</dd>
+
+        <dt class="col-sm-3">Médico:</dt>
+        <dd class="col-sm-9">@Model.NomMetge</dd>
+
+        <dt class="col-sm-3">Fecha:</dt>
+        <dd class="col-sm-9">@Model.Data.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Diagnóstico:</dt>
+        <dd class="col-sm-9">@Model.Diagnostic</dd>
+    </dl>
+    
+    <form asp-action="Delete" class="mt-4">
+        <input type="hidden" asp-for="IdVisita" />
+        
+        <button type="submit" class="btn btn-danger">Sí, Eliminar Definitivamente</button> 
+        <a asp-action="Index" class="btn btn-secondary">Cancelar y Volver</a>
+    </form>
+</div>

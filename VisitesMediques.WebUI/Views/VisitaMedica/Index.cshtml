@@ -1,0 +1,30 @@
+@model IEnumerable<VisitesMediques.Domain.Entities.VisitaMedica>
+
+@{ ViewData["Title"] = "Listado de Visitas"; }
+
+<h1>Gestión de Visitas Médicas</h1>
+<p><a asp-action="Create" class="btn btn-primary">Nueva Visita</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Paciente</th>
+            <th>Médico</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.NomPacient</td>
+            <td>@item.NomMetge</td>
+            <td>@item.Data.ToShortDateString()</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVisita">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVisita">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
